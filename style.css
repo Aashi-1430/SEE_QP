@@ -1,0 +1,525 @@
+
+/* ==========================================================================
+   SVIET QUESTION PAPER GENERATOR
+   Professional Light Theme | Navy Blue & Gold
+   ========================================================================== */
+
+/* ---------- Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap');
+
+
+/* ---------- Theme Variables ---------- */
+:root {
+    --navy: #14213d;
+    --navy-2: #1f3a6b;
+    --accent: #c8963e;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+}
+
+
+/* ---------- Global Styling ---------- */
+html,
+body,
+[class*="css"],
+.stApp {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: var(--ink);
+}
+
+.stApp {
+    background: var(--bg);
+}
+
+/* Hide default Streamlit chrome */
+#MainMenu,
+footer {
+    visibility: hidden;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.block-container {
+    padding-top: 1.6rem;
+    padding-bottom: 3rem;
+    max-width: 1180px;
+}
+
+
+/* ---------- Hero Banner ---------- */
+.hero {
+    background: linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 100%);
+    border-radius: 16px;
+    padding: 26px 34px;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-shadow: 0 10px 30px rgba(20, 33, 61, 0.18);
+    border-bottom: 4px solid var(--accent);
+}
+
+.hero h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    padding: 0;
+    letter-spacing: 0.2px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+.hero .badge {
+    display: inline-block;
+    background: rgba(200, 150, 62, 0.18);
+    color: #f1d9a8;
+    border: 1px solid rgba(200, 150, 62, 0.5);
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Logo in top-right corner */
+.hero-text {
+    flex: 1 1 320px;
+    min-width: 0;
+}
+
+.hero .hero-sub {
+    color: #cbd5e1 !important;
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+.hero-logo {
+    flex: 0 0 auto;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(200, 150, 62, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-logo img {
+    height: 92px;
+    width: auto;
+    display: block;
+}
+
+
+/* ---------- Step Headers ---------- */
+.step-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 30px 0 14px 0;
+}
+
+.step-num {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--navy);
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(20, 33, 61, 0.25);
+}
+
+.step-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.step-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+
+/* ---------- Expander Cards ---------- */
+div[data-testid="stExpander"] {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+    overflow: hidden;
+}
+
+div[data-testid="stExpander"] summary {
+    font-weight: 600;
+    color: var(--navy);
+    background: #f8fafc;
+}
+
+
+/* ---------- Input Fields ---------- */
+div[data-baseweb="input"],
+div[data-baseweb="select"] > div,
+div[data-baseweb="base-input"] {
+    border-radius: 10px !important;
+}
+
+/* Input labels */
+.stTextInput label,
+.stNumberInput label,
+.stDateInput label,
+.stSelectbox label,
+.stFileUploader label {
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: #334155;
+    letter-spacing: 0.2px;
+}
+
+.stTextInput label p,
+.stNumberInput label p,
+.stDateInput label p,
+.stSelectbox label p,
+.stFileUploader label p {
+    color: #334155 !important;
+}
+
+/* Text input fields */
+div[data-testid="stTextInput"] input {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    caret-color: #14213d !important;
+}
+
+/* Number input fields */
+div[data-testid="stNumberInput"] input {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: none !important;
+    caret-color: #14213d !important;
+}
+
+div[data-testid="stNumberInput"] div[data-baseweb="input"] {
+    background-color: #ffffff !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+}
+
+/* Number input increment/decrement buttons */
+div[data-testid="stNumberInput"] button {
+    background-color: #ffffff !important;
+    color: #14213d !important;
+    border: none !important;
+}
+
+/* Selectbox fields */
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+}
+
+/* Input typography */
+div[data-testid="stTextInput"] input,
+div[data-testid="stNumberInput"] input,
+div[data-testid="stDateInput"] input {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.92rem !important;
+}
+
+/* Focus effect */
+div[data-testid="stTextInput"] input:focus,
+div[data-testid="stNumberInput"] div[data-baseweb="input"]:focus-within,
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div:focus-within,
+div[data-testid="stDateInput"] div[data-baseweb="input"]:focus-within {
+    border-color: #1f3a6b !important;
+    box-shadow: 0 0 0 2px rgba(31, 58, 107, 0.12) !important;
+}
+
+/* Dropdown options */
+div[role="listbox"] {
+    background-color: #ffffff !important;
+}
+
+div[role="option"] {
+    color: #1e293b !important;
+}
+
+div[role="option"]:hover {
+    background-color: #eef3fb !important;
+}
+
+
+/* ---------- File Uploader ---------- */
+div[data-testid="stFileUploader"] section {
+    background: #ffffff;
+    border: 1.5px dashed #94a3b8;
+    border-radius: 14px;
+    padding: 18px;
+    transition: all .2s ease;
+}
+
+div[data-testid="stFileUploader"] section:hover {
+    border-color: var(--navy-2);
+    background: #f8fbff;
+}
+
+/* Uploader text */
+div[data-testid="stFileUploader"] section span,
+div[data-testid="stFileUploader"] section small,
+div[data-testid="stFileUploader"] section div,
+div[data-testid="stFileUploaderFile"] span,
+div[data-testid="stFileUploaderFile"] small,
+div[data-testid="stFileUploaderFile"] div {
+    color: #475569 !important;
+}
+
+/* Upload / Browse buttons */
+div[data-testid="stFileUploader"] section button,
+div[data-testid="stFileUploader"] button[kind],
+div[data-testid="stFileUploader"] [data-testid="stBaseButton-secondary"] {
+    background: #ffffff !important;
+    color: var(--navy) !important;
+    border: 1.5px solid var(--navy-2) !important;
+    border-radius: 10px !important;
+}
+
+div[data-testid="stFileUploader"] section button *,
+div[data-testid="stFileUploader"] [data-testid="stBaseButton-secondary"] * {
+    color: var(--navy) !important;
+}
+
+div[data-testid="stFileUploader"] section button:hover {
+    background: #eef3fb !important;
+}
+
+
+/* ---------- Exam Instructions Text Area ---------- */
+div[data-testid="stTextArea"] textarea {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 10px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    caret-color: #14213d !important;
+}
+
+/* Textarea placeholder */
+div[data-testid="stTextArea"] textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Textarea focus */
+div[data-testid="stTextArea"] textarea:focus {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border: 1.5px solid #1f3a6b !important;
+    box-shadow: 0 0 0 2px rgba(31, 58, 107, 0.12) !important;
+}
+
+/* Exam Instructions label */
+div[data-testid="stTextArea"] label,
+div[data-testid="stTextArea"] label p {
+    color: #14213d !important;
+    font-weight: 600 !important;
+}
+
+
+/* ---------- Buttons ---------- */
+.stButton > button,
+.stDownloadButton > button {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--line);
+    transition: all .15s ease;
+}
+
+/* Button hover */
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    border-color: var(--navy-2);
+    color: var(--navy-2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(20, 33, 61, 0.12);
+}
+
+/* Primary buttons */
+.stButton > button[kind="primary"] {
+    background: linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    border: none;
+}
+
+.stButton > button[kind="primary"]:hover {
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(20, 33, 61, 0.35);
+}
+
+/* Secondary / Shuffle buttons */
+.stButton > button:not([kind="primary"]) {
+    background: #ffffff !important;
+    color: var(--navy) !important;
+    border: 1.5px solid var(--navy-2) !important;
+}
+
+.stButton > button:not([kind="primary"]) * {
+    color: var(--navy) !important;
+}
+
+.stButton > button:not([kind="primary"]):hover {
+    background: #eef3fb !important;
+    border-color: var(--navy-2) !important;
+}
+
+/* Download buttons */
+.stDownloadButton > button {
+    background: var(--accent);
+    color: #1b1405;
+    border: none;
+    font-size: 1.02rem;
+    padding: 0.75rem 1rem;
+}
+
+.stDownloadButton > button:hover {
+    color: #1b1405;
+    background: #d6a64f;
+}
+
+
+/* ---------- Status Chips ---------- */
+.chip-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 8px 0 4px 0;
+}
+
+.chip {
+    background: #eaf1fb;
+    color: var(--navy-2);
+    border: 1px solid #cddcf3;
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* ---------- Paper Preview ---------- */
+.paper {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    padding: 34px 44px 22px 44px;
+    margin: 10px 0 22px 0;
+    font-family: 'Source Serif 4', 'Times New Roman', serif;
+}
+
+.paper .p-college {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.paper .p-line {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.paper .p-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-top: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+    padding: 8px 2px;
+    margin-top: 14px;
+    font-size: 0.88rem;
+    color: #334155;
+}
+
+.section-bar {
+    background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 22px 0 8px 0;
+    border-left: 5px solid var(--accent);
+}
+
+.q-item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--navy-2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 6px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.q-item .q-no {
+    font-weight: 700;
+    color: var(--navy);
+    margin-right: 6px;
+}
+
+.q-item .q-mark {
+    float: right;
+    background: #fdf3dd;
+    color: #8a5d0b;
+    border: 1px solid #f0d9a4;
+    border-radius: 999px;
+    padding: 1px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.empty-note {
+    color: var(--muted);
+    font-size: 0.88rem;
+    font-style: italic;
+    padding: 6px 2px;
+}
+
+
+/* ---------- Alerts ---------- */
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+}
